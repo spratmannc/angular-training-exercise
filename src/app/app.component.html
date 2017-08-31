@@ -1,0 +1,25 @@
+<h1>Celebrity Skills</h1>
+<ul>
+  <li *ngFor="let celeb of celebs;">{{celeb.name}}</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Celebrity Name</th>
+      <th>Sings</th>
+      <th>Dances</th>
+      <th>Acts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let celeb of celebs; let i = index;">
+      <td>{{i + 1}}</td>
+      <td>{{celeb.name}}</td>
+      <td>{{celeb.sing ? 'Yes' : 'No'}}</td>
+      <td>{{celeb.dance ? 'Yes' : 'No'}}</td>
+      <td>{{celeb.act ? 'Yes' : 'No'}}</td>
+    </tr>
+  </tbody>
+</table>
