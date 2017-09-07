@@ -23,10 +23,3 @@
     </tr>
   </tbody>
 </table>
-
-
-<select [(ngModel)]="selectedCelebrity">
-  <option *ngFor="let celeb of celebs;" [ngValue]="celeb">{{celeb.name}}</option>
-</select>
-
-<p>The selected celebrity is {{selectedCelebrity.name}}</p>
