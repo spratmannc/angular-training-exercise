@@ -1,0 +1,13 @@
+<td>{{celeb.index}}</td>
+<td>{{celeb.name}}</td>
+<td>{{celeb.sing | yesno}}</td>
+<td>{{celeb.dance | yesno}}</td>
+<td>{{celeb.act | yesno }}</td>
+<td>
+  <i class="fa fa-microphone" *ngIf="celeb.sing"></i>
+  <i class="fa fa-film" *ngIf="celeb.act"></i>
+  <i class="fa fa-blind" *ngIf="celeb.dance"></i>
+</td>
+<td>
+    <button (click)="toggle()">Toggle Dance</button>
+</td>

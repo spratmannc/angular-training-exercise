@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { YesnoPipe } from './yesno.pipe';
 import { SuccessDirective } from './success.directive';
+import { CelebrityrowComponent } from './celebrityrow/celebrityrow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     YesnoPipe,
-    SuccessDirective
+    SuccessDirective,
+    CelebrityrowComponent
   ],
   imports: [
     BrowserModule,

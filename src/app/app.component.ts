@@ -39,4 +39,10 @@ export class AppComponent {
     }
 
   ];
+  
+  constructor() {
+    this.celebs.forEach((c,i) => { 
+      c.index = i; 
+    } )
+  }
 }

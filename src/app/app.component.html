@@ -11,15 +11,13 @@
       <th>Sings</th>
       <th>Dances</th>
       <th>Acts</th>
+      <th>Icons</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let celeb of celebs; let i = index;" [appSuccess]="celeb.sing">
-      <td>{{i + 1}}</td>
-      <td>{{celeb.name}}</td>
-      <td>{{celeb.sing | yesno}}</td>
-      <td>{{celeb.dance | yesno}}</td>
-      <td>{{celeb.act | yesno }}</td>
+    <tr *ngFor="let celeb of celebs;"
+        app-celebrityrow [celeb]="celeb"          
+        [appSuccess]="celeb.sing">
     </tr>
   </tbody>
 </table>
