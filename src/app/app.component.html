@@ -3,7 +3,7 @@
   <li *ngFor="let celeb of celebs;">{{celeb.name}}</li>
 </ul>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Number</th>
@@ -14,12 +14,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let celeb of celebs; let i = index;">
+    <tr *ngFor="let celeb of celebs; let i = index;" [appSuccess]="celeb.sing">
       <td>{{i + 1}}</td>
       <td>{{celeb.name}}</td>
-      <td>{{celeb.sing ? 'Yes' : 'No'}}</td>
-      <td>{{celeb.dance ? 'Yes' : 'No'}}</td>
-      <td>{{celeb.act ? 'Yes' : 'No'}}</td>
+      <td>{{celeb.sing | yesno}}</td>
+      <td>{{celeb.dance | yesno}}</td>
+      <td>{{celeb.act | yesno }}</td>
     </tr>
   </tbody>
 </table>
+
+
+<select [(ngModel)]="selectedCelebrity">
+  <option *ngFor="let celeb of celebs;" [ngValue]="celeb">{{celeb.name}}</option>
+</select>
+
+<p>The selected celebrity is {{selectedCelebrity.name}}</p>

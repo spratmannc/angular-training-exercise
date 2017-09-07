@@ -10,7 +10,8 @@ import { Celebrity } from "./celebrity";
 export class AppComponent {
   title = 'app';
 
-  //rows: Array<string> = ["Tom Cruise", "Lady Gaga", "Michael Jackson", "Michael Jordan"];
+  selectedCelebrity: Celebrity;
+  
   celebs: Array<Celebrity> = [
     {
       name: "Tom Cruise",
