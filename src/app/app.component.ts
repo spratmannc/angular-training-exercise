@@ -45,4 +45,8 @@ export class AppComponent {
       c.index = i; 
     } )
   }
+
+  onSaved(celeb: Celebrity) {
+    this.celebs.push(celeb);
+  }
 }

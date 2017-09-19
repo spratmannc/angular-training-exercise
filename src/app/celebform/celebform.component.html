@@ -1,0 +1,35 @@
+
+
+<form #celebform="ngForm" (submit)="submit()">
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="celeb.name" class="form-control" required name="name" id="name" placeholder="Jane Doe">
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="sing" [(ngModel)]="celeb.sing"> Sing
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="dance" [(ngModel)]="celeb.dance"> Dance
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="act" [(ngModel)]="celeb.act"> Act
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!celebform.form.valid">Submit</button>
+    </div>
+  </div>
+
+</form>

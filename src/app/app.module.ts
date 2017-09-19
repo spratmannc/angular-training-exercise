@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { YesnoPipe } from './yesno.pipe';
 import { SuccessDirective } from './success.directive';
 import { CelebrityrowComponent } from './celebrityrow/celebrityrow.component';
+import { CelebformComponent } from './celebform/celebform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     YesnoPipe,
     SuccessDirective,
-    CelebrityrowComponent
+    CelebrityrowComponent,
+    CelebformComponent,
   ],
   imports: [
     BrowserModule,
