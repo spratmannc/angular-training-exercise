@@ -1,37 +1,17 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Celebrity } from "../celebrity";
+import { DataServiceService } from '../services/data-service.service';
+import { CelebForm } from '../businesslogic/CelebForm';
 
 @Component({
   selector: 'celebform',
   templateUrl: './celebform.component.html',
   styles: []
 })
-export class CelebformComponent implements OnInit {
+export class CelebformComponent extends CelebForm {
 
-  celeb: Celebrity;
-
-  @Output()
-  saved: EventEmitter<Celebrity> = new EventEmitter<Celebrity>();
-
-  constructor() { 
-    this.reset();
+  constructor(dataService: DataServiceService) {
+    super(dataService);
   }
-
-  ngOnInit() {
-  }
-
-  submit() {
-    this.saved.emit(this.celeb);
-    this.reset();
-  }
-
-  reset() {
-    this.celeb = {
-      name: undefined,
-      sing: false,
-      act: false,
-      dance: false
-    };
-  }
-
+  
 }

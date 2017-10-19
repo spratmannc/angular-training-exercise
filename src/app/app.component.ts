@@ -1,52 +1,29 @@
 import { Component } from '@angular/core';
 import { Celebrity } from "./celebrity";
+import { DataServiceService } from './services/data-service.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: "./app.component.html",
-  styles: []
+  styles: [],
+  providers: [DataServiceService]
 })
 export class AppComponent {
   title = 'app';
 
   selectedCelebrity: Celebrity;
   
-  celebs: Array<Celebrity> = [
-    {
-      name: "Tom Cruise",
-      act: true,
-      sing: false,
-      dance: false
-    },
-    {
-      name: "Lady Gaga",
-      act: false,
-      sing: true,
-      dance: true
-    },
-    {
-      name: "Michael Jackson",
-      act: false,
-      sing: true,
-      dance: true
-    },
-    {
-      name: "Michael Jordan",
-      act: false,
-      sing: false,
-      dance: false
-    }
-
-  ];
+  celebs: Array<Celebrity> = [];
   
-  constructor() {
+  constructor(private data: DataServiceService) {
+
+    data.celebs.subscribe(newCelebs => this.celebs = newCelebs);
+
     this.celebs.forEach((c,i) => { 
       c.index = i; 
-    } )
+    });
+
   }
 
-  onSaved(celeb: Celebrity) {
-    this.celebs.push(celeb);
-  }
 }

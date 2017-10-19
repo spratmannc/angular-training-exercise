@@ -16,10 +16,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let celeb of celebs;"
-        app-celebrityrow [celeb]="celeb"          
+        app-celebrityrow [celeb]="celeb"
         [appSuccess]="celeb.sing">
     </tr>
   </tbody>
 </table>
 
-<celebform (saved)="onSaved($event)"></celebform>
+<!-- <celebform (saved)="onSaved($event)"></celebform> -->
+<celebform></celebform>

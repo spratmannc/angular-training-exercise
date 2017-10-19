@@ -1,0 +1,53 @@
+{
+  "celebrities": [
+    {
+      "id": 1,
+      "name": "Tom Cruise",
+      "act": true,
+      "sing": false,
+      "dance": false
+    },
+    {
+      "id": 2,
+      "name": "Lady Gaga",
+      "act": false,
+      "sing": true,
+      "dance": true
+    },
+    {
+      "id": 3,
+      "name": "Michael Jackson",
+      "act": false,
+      "sing": true,
+      "dance": true
+    },
+    {
+      "id": 4,
+      "name": "Michael Jordan",
+      "act": false,
+      "sing": false,
+      "dance": false
+    },
+    {
+      "id": 5,
+      "name": "roger spratley",
+      "act": false,
+      "sing": false,
+      "dance": true
+    },
+    {
+      "name": "Tonya Spratley",
+      "sing": true,
+      "act": false,
+      "dance": false,
+      "id": 6
+    },
+    {
+      "name": "Amol Bhattad",
+      "sing": true,
+      "act": false,
+      "dance": false,
+      "id": 7
+    }
+  ]
+}

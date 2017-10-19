@@ -7,6 +7,7 @@ import { YesnoPipe } from './yesno.pipe';
 import { SuccessDirective } from './success.directive';
 import { CelebrityrowComponent } from './celebrityrow/celebrityrow.component';
 import { CelebformComponent } from './celebform/celebform.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CelebformComponent } from './celebform/celebform.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
