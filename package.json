@@ -5,8 +5,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:data": "json-server data/db.json",
     "build": "ng build",
-    "test": "echo \"Error: no test... minimal project\" && exit 1",
+    "test": "mocha ./dist/out-tsc/test",
+    "test:w": "mocha ./dist/out-tsc/test --watch",
     "lint": "echo \"Error: no lint... minimal project\" && exit 1",
     "e2e": "echo \"Error: no e2e... minimal project\" && exit 1"
   },
@@ -29,6 +31,10 @@
     "@angular/cli": "1.2.6",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "mocha": "^4.0.1",
+    "chai": "^4.1.2",
+    "@types/mocha": "latest",
+    "@types/chai": "latest"
   }
 }
